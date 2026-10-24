@@ -256,13 +256,6 @@ Repository governance and tooling:
 - `AGENTS.md`
 - `CITATION.cff`
 
-### Design constraints recorded
-
-- Six regimes and nine profiles are distinct layers; profiles refine regimes, they do not replace them
-- Semantic richness lives inside Lean only; no Python validation surface
-- No operational or export layer in theory repos
-- OCC/AD classified as BRK; OBL/BF as IGN; REC/BF as PRS: decisions recorded in SE-300 Section 4
-
 ---
 
 ## Notes on versioning and releases

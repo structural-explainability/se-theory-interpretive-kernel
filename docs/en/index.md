@@ -332,16 +332,3 @@ elan self update
 lake update
 lake build
 ```
-
-## Tooling
-
-Python tooling is used for:
-
-- documentation generation (Zensical)
-- repository hygiene (pre-commit, ruff)
-
-Python tooling must not:
-
-- define correctness
-- validate theory semantics
-- replace Lean proofs

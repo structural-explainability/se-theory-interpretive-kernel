@@ -23,8 +23,15 @@ Lean source files are authoritative for formal definitions, predicates, axioms,
 theorems, proof obligations, and reference rules.
 
 Reference artifacts under `reference/` and generated artifacts under
-`data/identity-regimes/` mirror the Lean public surface.
+`data/` mirror the Lean public surface.
 They do not define theory semantics independently of Lean.
+
+The CI-Lean workflow builds the declared public Lean surface with
+`lake build --wfail`,
+failing on reported warnings, including `sorry`.
+Successful compilation verifies formal declarations against their
+stated assumptions; it does not establish the scientific adequacy
+of those assumptions or interpretations.
 
 ## Import
 
@@ -41,73 +48,17 @@ SE.IdentityRegimes.lean
 SE.IdentityRegimes/Surface.lean
 ```
 
-## Scope
+## Developer
 
-This repository covers:
+Maintain:
 
-- six canonical identity regimes,
-- nine canonical regime profile kinds after splits,
-- regime requirement structure,
-- regime-profile structure,
-- admissibility conditions for regime application over neutral substrates,
-- transformation basis and classification structure,
-- split pressure predicates and theorems,
-- pairwise non-collapse proofs,
-- lower-bound and classification-uniqueness theorem structure,
-- regime-typed multigraph structure,
-- representation theorem structure,
-- machine-checked Lean theorems.
+- `lakefile.toml`
+- `lean-toolchain`
+- `reference/theory-reference.toml` - hand-maintained configuration
+- `reference/*.toml` - reference source artifacts
+- Lean source and reference-rule (RR) traceability comments - hand-maintained theory source
 
-## Owns
-
-This repository owns the identity-regime theory layer, including:
-
-- six canonical identity regimes:
-  - OBL
-  - NOR
-  - OCC
-  - CTX
-  - REC
-  - ENR
-- nine canonical regime profile kinds after splits:
-  - OBL
-  - OCC
-  - REC
-  - ENR_L
-  - ENR_I
-  - CTX_E
-  - CTX_S
-  - NOR_C
-  - NOR_S
-- transformations:
-  - RE
-  - AN
-  - RF
-  - AD
-  - RC
-  - RA
-  - SU
-  - BF
-  - PV
-  - SE
-
-## Does not own
-
-This repository does not own:
-
-- neutral substrate primitives; see `se-theory-interpretive-kernel`,
-- path grammar and expressive adequacy,
-- domain mappings,
-- operational validation,
-- runtime systems,
-- contract artifact generation.
-
-## Command Reference
-
-<details>
-<summary>Show command reference</summary>
-
-### In a machine terminal
+### Clone and Open Project in VS Code
 
 Open a machine terminal where you want the project:
 
