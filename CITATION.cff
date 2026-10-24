@@ -1,0 +1,47 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# May reference upstream dependencies, but must not refer to downstream.
+# USAGE: See https://citation-file-format.github.io/ for details.
+# check with:
+# uvx cffconvert --validate
+
+cff-version: "1.2.0"
+message: "If you use this work, please cite it using the metadata in CITATION.cff."
+type: software
+
+title: "SE Theory: Identity Regimes"
+version: "0.3.0"
+date-released: "2026-05-02"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+
+repository-code: "https://github.com/structural-explainability/se-theory-interpretive-kernel"
+url: "https://github.com/structural-explainability/se-theory-interpretive-kernel"
+
+license: MIT
+
+abstract: >
+  Lean 4 formalization of the identity regimes of Structural
+  Explainability. This repository defines the six canonical regimes,
+  regime requirement structure, admissibility conditions for regime
+  application over neutral substrates, and regime-profile structure.
+  It does not define substrate primitives, persistence behavior,
+  domain semantics, or operational validation.
+
+keywords:
+  - structural-explainability
+  - identity-regimes
+  - regime-profiles
+  - lean4
+  - theorem-proving
+  - formal-verification
+  - admissibility
+  - requirements
+  - necessity-sufficiency
+  - proof-carrying
