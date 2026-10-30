@@ -11,9 +11,9 @@ cff-version: "1.2.0"
 message: "If you use this work, please cite it using the metadata in CITATION.cff."
 type: software
 
-title: "SE Theory: Identity Regimes"
-version: "0.3.0"
-date-released: "2026-05-02"
+title: "SE Theory: Interpretive Kernel"
+version: "0.3.1" # CUSTOM: Updated to match the current release version of the project
+date-released: "2026-10-30" # CUSTOM: Updated to match the current release date of the project
 
 authors:
   - family-names: Case
@@ -24,24 +24,32 @@ authors:
 repository-code: "https://github.com/structural-explainability/se-theory-interpretive-kernel"
 url: "https://github.com/structural-explainability/se-theory-interpretive-kernel"
 
-license: MIT
+license: Apache-2.0
 
 abstract: >
-  Lean 4 formalization of the identity regimes of Structural
-  Explainability. This repository defines the six canonical regimes,
-  regime requirement structure, admissibility conditions for regime
-  application over neutral substrates, and regime-profile structure.
-  It does not define substrate primitives, persistence behavior,
-  domain semantics, or operational validation.
+  Planned Lean 4 formalization of the Interpretive Kernel of Structural
+  Explainability. The theory investigates how equivalence relations
+  on distinct carriers are related through explicit interpretations
+  and comparison rules. Its proposed scope includes finite equivalence
+  and partition structures, interpretation-induced kernels, refinement
+  and admissibility conditions, coherent output regimes, threshold
+  constructions, and finite witnesses of incompatibility or
+  incomparability. The objective is to characterize the mathematical
+  conditions under which interpretations preserve or distinguish
+  declared relationships without presupposing agreement about domain
+  meaning. The repository does not define domain semantics, operational
+  audits, or the identity-regime taxonomy.
 
 keywords:
   - structural-explainability
-  - identity-regimes
-  - regime-profiles
+  - interpretive-kernel
+  - equivalence-relations
+  - interpretation
+  - partition-algebra
+  - refinement
+  - admissibility
+  - kernels
+  - finite-witnesses
   - lean4
   - theorem-proving
   - formal-verification
-  - admissibility
-  - requirements
-  - necessity-sufficiency
-  - proof-carrying

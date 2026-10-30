@@ -1,0 +1,91 @@
+# ============================================================
+# Dependency Registry
+# se-theory-interpretive-kernel
+# ============================================================
+
+schema = "se-dependency-registry-1"
+repo = "se-theory-interpretive-kernel"
+
+# ============================================================
+# === REQUIRED DEPENDENCIES ===
+# ============================================================
+
+[dependency.se_manifest_schema]
+kind = "dependency"
+id = "se-manifest-schema"
+target_repo = "se-manifest-schema"
+dependency_kind = "repository-schema"
+required = true
+allowed = true
+description = "The repository declares its identity, scope, and conformance metadata through the shared Structural Explainability manifest schema."
+
+[dependency.se_theory_reference_kit]
+kind = "dependency"
+id = "se-theory-reference-kit"
+target_repo = "se-theory-reference-kit"
+dependency_kind = "reference-tooling"
+required = true
+allowed = true
+description = "The repository consumes the shared theory-reference toolkit for validating, exporting, cataloging, and inspecting repository-owned reference declarations."
+
+# ============================================================
+# === ALLOWED BUT NOT REQUIRED ===
+# ============================================================
+
+[dependency.se_theory_neutral_substrate]
+kind = "dependency"
+id = "se-theory-neutral-substrate"
+target_repo = "se-theory-neutral-substrate"
+dependency_kind = "lean-library"
+required = false
+allowed = true
+description = "Neutral Substrate supplies the substrates, referential regimes, and frameworks over which interpretive kernels are constructed. The Lean source does not import it; the theory is stated for abstract carriers, and any connection to substrate interfaces is supplied externally."
+
+[dependency.se_theory_transformation]
+kind = "dependency"
+id = "se-theory-transformation"
+target_repo = "se-theory-transformation"
+dependency_kind = "lean-library"
+required = false
+allowed = true
+description = "Transformation theory supplies transformation semantics. The Lean source does not import it; any connection between transformation semantics and interpretive kernels is supplied externally."
+
+# ============================================================
+# === FORBIDDEN FORMAL THEORY DEPENDENCIES ===
+# ============================================================
+
+[dependency.no_identity_regimes_dependency]
+kind = "dependency"
+id = "no-identity-regimes-dependency"
+target_repo = "se-theory-identity-regimes"
+dependency_kind = "forbidden-formal-theory-dependency"
+required = false
+allowed = false
+description = "Interpretive Kernel must not depend on identity-regime theory; it is an independent mathematical theory, and identity regimes are applications supplied externally."
+
+[dependency.no_operational_identity_dependency]
+kind = "dependency"
+id = "no-operational-identity-dependency"
+target_repo = "se-theory-operational-identity"
+dependency_kind = "forbidden-formal-theory-dependency"
+required = false
+allowed = false
+description = "Interpretive Kernel must not depend on operational-identity theory; auditing implemented identity rules is an application, not part of the kernel and adjunction."
+
+[dependency.no_persistence_dependency]
+kind = "dependency"
+id = "no-persistence-dependency"
+target_repo = "se-theory-persistence"
+dependency_kind = "forbidden-formal-theory-dependency"
+required = false
+allowed = false
+description = "Interpretive Kernel must not depend on persistence theory; persistence classification is not part of the kernel and adjunction."
+
+[dependency.no_structural_explainability_dependency]
+kind = "dependency"
+id = "no-structural-explainability-dependency"
+target_repo = "se-theory-structural-explainability"
+dependency_kind = "forbidden-formal-theory-dependency"
+required = false
+allowed = false
+description = "Interpretive Kernel must not depend on the Structural Explainability integration theory; the integration layer depends on the foundational repositories."

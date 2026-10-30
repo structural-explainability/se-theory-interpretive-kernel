@@ -1,0 +1,52 @@
+# ============================================================
+# Interpretive Kernel Vocabulary
+# se-theory-interpretive-kernel
+# ============================================================
+# Public Lean definitions that are not Prop-valued:
+# bundled setoids, the probe signature, and the demand ultrametric.
+
+schema = "se-vocabulary-registry-1"
+kind = "vocabulary"
+repo = "se-theory-interpretive-kernel"
+surface_module = "SE.InterpretiveKernel"
+namespace = "SE.InterpretiveKernel"
+
+[vocabulary.KernelSetoid]
+order = 1
+id = "KernelSetoid"
+cite_id = "IK.DEF.KERNEL_SETOID"
+name = "Kernel setoid"
+lean_symbol = "SE.InterpretiveKernel.kernelSetoid"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Bundled form of the kernel."
+
+[vocabulary.LiftSetoid]
+order = 2
+id = "LiftSetoid"
+cite_id = "IK.DEF.LIFT_SETOID"
+name = "Lift setoid"
+lean_symbol = "SE.InterpretiveKernel.liftSetoid"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "Bundled form of the lifted relation."
+
+[vocabulary.DemandUltrametric]
+order = 3
+id = "DemandUltrametric"
+cite_id = "IK.DEF.DEMAND_ULTRAMETRIC"
+name = "Demand ultrametric"
+lean_symbol = "SE.InterpretiveKernel.demandUltrametric"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The pairwise interpretive demand as a generalized ultrametric on frames."
+
+[vocabulary.ProbeSignature]
+order = 4
+id = "ProbeSignature"
+cite_id = "IK.DEF.PROBE_SIGNATURE"
+name = "Probe signature"
+lean_symbol = "SE.InterpretiveKernel.probeSignature"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Signature"
+description = "The paper's probe signature: each frame goes to the function sending every selected probe to the ρ-class of its output."

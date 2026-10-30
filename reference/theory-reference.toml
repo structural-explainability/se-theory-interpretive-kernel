@@ -21,19 +21,28 @@ description = "Identity regimes theory repository for Structural Explainability.
 # === Lean Public Surface ===
 
 [lean]
-root_module = "SE.IdentityRegimes"
+root_module = "SE"
 public_modules = [
-  "SE.IdentityRegimes",
-  "SE.IdentityRegimes.Core",
-  "SE.IdentityRegimes.Spec",
-  "SE.IdentityRegimes.Surface",
+    "SE",
+    "SE.InterpretiveKernel",
+    # Get the following with:
+    # Get-ChildItem .\SE\InterpretiveKernel -Recurse -Filter *.lean |
+    # ForEach-Object { $_.FullName.Substring((Get-Location).Path.Length + 1) } |
+    # Sort-Object
+    "SE.InterpretiveKernel.Adjunction",
+    "SE.InterpretiveKernel.Core",
+    "SE.InterpretiveKernel.Generating",
+    "SE.InterpretiveKernel.Kernel",
+    "SE.InterpretiveKernel.Lattice",
+    "SE.InterpretiveKernel.Lifting",
+    "SE.InterpretiveKernel.Preservation",
+    "SE.InterpretiveKernel.Representation",
+    "SE.InterpretiveKernel.Signature",
+    "SE.InterpretiveKernel.Threshold",
+    "SE.InterpretiveKernel.Witness",
 ]
 
-test_modules = [
-  "TestAll",
-  "TestBasic",
-  "TestRegime",
-]
+test_modules = ["SETest"]
 
 # === Reference Artifacts ===
 
@@ -43,26 +52,17 @@ root = "reference"
 # === Exported Machine Artifacts ===
 
 [export]
-root = "data/identity-regimes"
+root = "data/interpretive-kernel"
 
 # === Surface-Kind Mapping ===
 
 [surface_kinds]
-axiom = "reference/substrate-axioms.toml"
-dependency = "reference/dependency-registry.toml"
-predicate = "reference/substrate-predicates.toml"
-requirement = "reference/substrate-requirements.toml"
-theorem = "reference/substrate-theorems.toml"
-traceability = "reference/traceability-registry.toml"
-type = "reference/substrate-types.toml"
+type = "reference/interpretive-kernel-types.toml"
+vocabulary = "reference/interpretive-kernel-vocabulary.toml"
+predicate = "reference/interpretive-kernel-predicates.toml"
+theorem = "reference/interpretive-kernel-theorems.toml"
 
 # === Export Mapping ===
 
 [export_map]
-axiom = "data/identity-regimes/substrate-axiom-registry.json"
-catalog = "data/identity-regimes/identity-regimes-catalog.json"
-predicate = "data/identity-regimes/substrate-predicate-registry.json"
-requirement = "data/identity-regimes/substrate-requirement-registry.json"
-theorem = "data/identity-regimes/substrate-theorem-registry.json"
-traceability = "data/identity-regimes/traceability-registry.json"
-type = "data/identity-regimes/substrate-type-registry.json"
+catalog = "data/interpretive-kernel/interpretive-kernel-catalog.json"

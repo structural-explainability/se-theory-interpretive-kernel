@@ -3,7 +3,7 @@
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://structural-explainability.github.io/se-theory-interpretive-kernel/)
 [![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/structural-explainability/se-theory-interpretive-kernel)
 [![Tooling](https://img.shields.io/badge/python-3.15%2B-blue?logo=python)](./pyproject.toml)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](./LICENSE)
+[![License](https://img.shields.io/badge/license-Apache--2.0-yellow.svg)](./LICENSE)
 
 [![CI-Lean](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/ci-lean.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/ci-lean.yml)
 [![CI](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/ci-python-zensical.yml)
@@ -38,14 +38,14 @@ of those assumptions or interpretations.
 Downstream Lean projects should import the public surface:
 
 ```text
-import SE.IdentityRegimes
+import SE.InterpretiveKernel
 ```
 
 The public import surface is curated in:
 
 ```text
-SE.IdentityRegimes.lean
-SE.IdentityRegimes/Surface.lean
+SE.InterpretiveKernel.lean
+SE.InterpretiveKernel/Surface.lean
 ```
 
 ## Developer
@@ -144,7 +144,7 @@ git push -u origin main
 
 ## License
 
-[MIT](./LICENSE)
+[Apache 2.0](./LICENSE)
 
 ## Repository Manifest
 

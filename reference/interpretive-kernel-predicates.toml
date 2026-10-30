@@ -1,0 +1,241 @@
+# ============================================================
+# Interpretive Kernel Predicates
+# se-theory-interpretive-kernel
+# ============================================================
+# Public Prop-valued definitions: order and lattice operations on relations, the interpretation-induced kernel, coherence, the generated occurrence regime, admissibility, and pairwise demand.
+
+schema = "se-predicate-registry-1"
+kind = "predicate"
+repo = "se-theory-interpretive-kernel"
+surface_module = "SE.InterpretiveKernel"
+namespace = "SE.InterpretiveKernel"
+
+[predicate.Finer]
+order = 1
+id = "Finer"
+cite_id = "IK.DEF.FINER"
+name = "Finer"
+lean_symbol = "SE.InterpretiveKernel.Finer"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Relation inclusion R ⊆ S. For equivalence relations, R is a finer partition than S. Finer R S is R ≤ S in the documentation."
+
+[predicate.Coarser]
+order = 2
+id = "Coarser"
+cite_id = "IK.DEF.COARSER"
+name = "Coarser"
+lean_symbol = "SE.InterpretiveKernel.Coarser"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Coarser R S is Finer S R."
+
+[predicate.KernelRel]
+order = 3
+id = "KernelRel"
+cite_id = "IK.DEF.KERNEL_REL"
+name = "Kernel rel"
+lean_symbol = "SE.InterpretiveKernel.kernelRel"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "kernelRel I Q ρ e e' : every selected probe sends e and e' to ρ-related outputs."
+
+[predicate.Coherent]
+order = 4
+id = "Coherent"
+cite_id = "IK.DEF.COHERENT"
+name = "Coherent"
+lean_symbol = "SE.InterpretiveKernel.Coherent"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Coherence of a frame relation φ with an occurrence relation ρ through I and Q: φ ≤ K_Q(ρ), i.e. Finer φ (kernelRel I Q ρ). A mathematical compatibility condition only."
+
+[predicate.Generators]
+order = 5
+id = "Generators"
+cite_id = "IK.DEF.GENERATORS"
+name = "Generators"
+lean_symbol = "SE.InterpretiveKernel.generators"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "Generating pairs of occurrences: (I p e, I p e') with Q p and φ e e'."
+
+[predicate.LiftRel]
+order = 6
+id = "LiftRel"
+cite_id = "IK.DEF.LIFT_REL"
+name = "Lift rel"
+lean_symbol = "SE.InterpretiveKernel.liftRel"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "L_Q(φ): equivalence closure of the generating pairs."
+
+[predicate.Compatible]
+order = 7
+id = "Compatible"
+cite_id = "IK.DEF.COMPATIBLE"
+name = "Compatible"
+lean_symbol = "SE.InterpretiveKernel.Compatible"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "ρ is a compatible occurrence relation for φ: an equivalence relation with which φ is coherent."
+
+[predicate.TotalRel]
+order = 8
+id = "TotalRel"
+cite_id = "IK.DEF.TOTAL_REL"
+name = "Total rel"
+lean_symbol = "SE.InterpretiveKernel.totalRel"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Top: the total relation."
+
+[predicate.DiagonalRel]
+order = 9
+id = "DiagonalRel"
+cite_id = "IK.DEF.DIAGONAL_REL"
+name = "Diagonal rel"
+lean_symbol = "SE.InterpretiveKernel.diagonalRel"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Bottom: the diagonal, i.e. equality."
+
+[predicate.MeetRel]
+order = 10
+id = "MeetRel"
+cite_id = "IK.DEF.MEET_REL"
+name = "Meet rel"
+lean_symbol = "SE.InterpretiveKernel.meetRel"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Meet of an indexed family: intersection. The empty family gives totalRel."
+
+[predicate.MeetRel2]
+order = 11
+id = "MeetRel2"
+cite_id = "IK.DEF.MEET_REL2"
+name = "Meet rel2"
+lean_symbol = "SE.InterpretiveKernel.meetRel2"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Binary meet: intersection."
+
+[predicate.JoinRel]
+order = 12
+id = "JoinRel"
+cite_id = "IK.DEF.JOIN_REL"
+name = "Join rel"
+lean_symbol = "SE.InterpretiveKernel.joinRel"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Join of an indexed family: equivalence closure of the union. The empty family gives the equivalence closure of the empty relation, which is equality."
+
+[predicate.JoinRel2]
+order = 13
+id = "JoinRel2"
+cite_id = "IK.DEF.JOIN_REL2"
+name = "Join rel2"
+lean_symbol = "SE.InterpretiveKernel.joinRel2"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Binary join: equivalence closure of the union."
+
+[predicate.ProbeUnion]
+order = 14
+id = "ProbeUnion"
+cite_id = "IK.DEF.PROBE_UNION"
+name = "Probe union"
+lean_symbol = "SE.InterpretiveKernel.probeUnion"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "Union of two probe families."
+
+[predicate.ProbeUnionFamily]
+order = 15
+id = "ProbeUnionFamily"
+cite_id = "IK.DEF.PROBE_UNION_FAMILY"
+name = "Probe union family"
+lean_symbol = "SE.InterpretiveKernel.probeUnionFamily"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "Indexed union of probe families."
+
+[predicate.Admissible]
+order = 16
+id = "Admissible"
+cite_id = "IK.DEF.ADMISSIBLE"
+name = "Admissible"
+lean_symbol = "SE.InterpretiveKernel.Admissible"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "ρ ∈ Adm_Q(φ): ρ is an equivalence relation and φ ≤ K_Q(ρ)."
+
+[predicate.Threshold]
+order = 17
+id = "Threshold"
+cite_id = "IK.DEF.THRESHOLD"
+name = "Threshold"
+lean_symbol = "SE.InterpretiveKernel.threshold"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "The interpretive threshold Θ_Q(φ) = L_Q(φ)."
+
+[predicate.PrincipalPair]
+order = 18
+id = "PrincipalPair"
+cite_id = "IK.DEF.PRINCIPAL_PAIR"
+name = "Principal pair"
+lean_symbol = "SE.InterpretiveKernel.principalPair"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The principal pair regime γ_{x,y}: the least equivalence relation on frames identifying x and y."
+
+[predicate.Demand]
+order = 19
+id = "Demand"
+cite_id = "IK.DEF.DEMAND"
+name = "Demand"
+lean_symbol = "SE.InterpretiveKernel.demand"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Pairwise interpretive demand δ_Q(x,y) = L_Q(γ_{x,y})."
+
+[predicate.PreservesMeets]
+order = 20
+id = "PreservesMeets"
+cite_id = "IK.DEF.PRESERVES_MEETS"
+name = "Preserves meets"
+lean_symbol = "SE.InterpretiveKernel.PreservesMeets"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "A map K on relations is a complete meet homomorphism on equivalence relations: it sends equivalences to equivalences and preserves meets of every family of equivalences, including the empty family (so K ⊤ = ⊤)."
+
+[predicate.RepresentingDist]
+order = 21
+id = "RepresentingDist"
+cite_id = "IK.DEF.REPRESENTING_DIST"
+name = "Representing dist"
+lean_symbol = "SE.InterpretiveKernel.representingDist"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The representing value δ_K(x,y) = ⋀ {ρ equivalence | K ρ x y}."
+
+[predicate.UltrametricKernel]
+order = 22
+id = "UltrametricKernel"
+cite_id = "IK.DEF.ULTRAMETRIC_KERNEL"
+name = "Ultrametric kernel"
+lean_symbol = "SE.InterpretiveKernel.ultrametricKernel"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The map ρ ↦ {(x,y) | δ(x,y) ≤ ρ} determined by a generalized ultrametric."
+
+[predicate.WitnessOn]
+order = 23
+id = "WitnessOn"
+cite_id = "IK.DEF.WITNESS_ON"
+name = "Witness on"
+lean_symbol = "SE.InterpretiveKernel.WitnessOn"
+lean_kind = "def"
+source_module = "SE.InterpretiveKernel.Witness"
+description = "Search statement over the lists es and ps."

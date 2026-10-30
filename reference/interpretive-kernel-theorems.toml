@@ -1,0 +1,1083 @@
+# ============================================================
+# Interpretive Kernel Theorems
+# se-theory-interpretive-kernel
+# ============================================================
+# Public semantic theorems for the Interpretive Kernel theory.
+#
+# Finite examples in SETest are intentionally not registered here.
+
+schema = "se-theorem-registry-1"
+kind = "theorem"
+repo = "se-theory-interpretive-kernel"
+surface_module = "SE.InterpretiveKernel"
+namespace = "SE.InterpretiveKernel"
+
+[theorem.FinerRefl]
+order = 1
+id = "FinerRefl"
+cite_id = "IK.THM.FINER_REFL"
+name = "Finer refl"
+lean_symbol = "SE.InterpretiveKernel.Finer.refl"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Every relation is finer than itself."
+
+[theorem.FinerTrans]
+order = 2
+id = "FinerTrans"
+cite_id = "IK.THM.FINER_TRANS"
+name = "Finer trans"
+lean_symbol = "SE.InterpretiveKernel.Finer.trans"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Finer is transitive."
+
+[theorem.FinerAntisymm]
+order = 3
+id = "FinerAntisymm"
+cite_id = "IK.THM.FINER_ANTISYMM"
+name = "Finer antisymm"
+lean_symbol = "SE.InterpretiveKernel.Finer.antisymm"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Mutual inclusion gives extensional equality of relations."
+
+[theorem.FinerIffSubrelation]
+order = 4
+id = "FinerIffSubrelation"
+cite_id = "IK.THM.FINER_IFF_SUBRELATION"
+name = "Finer iff subrelation"
+lean_symbol = "SE.InterpretiveKernel.finer_iff_subrelation"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Finer is exactly core's Subrelation (with explicit binders)."
+
+[theorem.FinerEqOfRefl]
+order = 5
+id = "FinerEqOfRefl"
+cite_id = "IK.THM.FINER_EQ_OF_REFL"
+name = "Finer eq of refl"
+lean_symbol = "SE.InterpretiveKernel.finer_eq_of_refl"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Equality is the finest equivalence: it is finer than every reflexive relation."
+
+[theorem.FinerTotal]
+order = 6
+id = "FinerTotal"
+cite_id = "IK.THM.FINER_TOTAL"
+name = "Finer total"
+lean_symbol = "SE.InterpretiveKernel.finer_total"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "The total relation is the coarsest relation."
+
+[theorem.EqvClosureEquivalence]
+order = 7
+id = "EqvClosureEquivalence"
+cite_id = "IK.THM.EQV_CLOSURE_EQUIVALENCE"
+name = "Eqv closure equivalence"
+lean_symbol = "SE.InterpretiveKernel.EqvClosure.equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "The closure is an equivalence relation."
+
+[theorem.EqvClosureSubset]
+order = 8
+id = "EqvClosureSubset"
+cite_id = "IK.THM.EQV_CLOSURE_SUBSET"
+name = "Eqv closure subset"
+lean_symbol = "SE.InterpretiveKernel.EqvClosure.subset"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "The closure contains the generating relation."
+
+[theorem.EqvClosureLeOfEquivalence]
+order = 9
+id = "EqvClosureLeOfEquivalence"
+cite_id = "IK.THM.EQV_CLOSURE_LE_OF_EQUIVALENCE"
+name = "Eqv closure le of equivalence"
+lean_symbol = "SE.InterpretiveKernel.EqvClosure.le_of_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "Minimality: any equivalence relation containing r contains its closure."
+
+[theorem.EqvClosureMonotone]
+order = 10
+id = "EqvClosureMonotone"
+cite_id = "IK.THM.EQV_CLOSURE_MONOTONE"
+name = "Eqv closure monotone"
+lean_symbol = "SE.InterpretiveKernel.EqvClosure.monotone"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Core"
+description = "The closure operator is monotone in the generating relation."
+
+[theorem.CoherentIff]
+order = 11
+id = "CoherentIff"
+cite_id = "IK.THM.COHERENT_IFF"
+name = "Coherent iff"
+lean_symbol = "SE.InterpretiveKernel.coherent_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Unfolded form of coherence."
+
+[theorem.KernelRelEquivalence]
+order = 12
+id = "KernelRelEquivalence"
+cite_id = "IK.THM.KERNEL_REL_EQUIVALENCE"
+name = "Kernel rel equivalence"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "K_Q(ρ) is an equivalence relation whenever ρ is."
+
+[theorem.KernelRelMonotone]
+order = 13
+id = "KernelRelMonotone"
+cite_id = "IK.THM.KERNEL_REL_MONOTONE"
+name = "Kernel rel monotone"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_monotone"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "K is monotone in ρ: finer occurrence relation gives finer kernel."
+
+[theorem.KernelRelAntitoneProbes]
+order = 14
+id = "KernelRelAntitoneProbes"
+cite_id = "IK.THM.KERNEL_REL_ANTITONE_PROBES"
+name = "Kernel rel antitone probes"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_antitone_probes"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "More probes, finer kernel: if Q ⊆ Q' then K_{Q'}(ρ) ≤ K_Q(ρ). (Relation inclusion, not partition-direction confusion: a larger probe family imposes more conditions, so fewer frame pairs are related.)"
+
+[theorem.CoherentOfProbesSubset]
+order = 15
+id = "CoherentOfProbesSubset"
+cite_id = "IK.THM.COHERENT_OF_PROBES_SUBSET"
+name = "Coherent of probes subset"
+lean_symbol = "SE.InterpretiveKernel.coherent_of_probes_subset"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Coherence is monotone in the probe family in the stronger direction: coherence at a larger family gives coherence at a smaller one."
+
+[theorem.CoherentOfFinerFrames]
+order = 16
+id = "CoherentOfFinerFrames"
+cite_id = "IK.THM.COHERENT_OF_FINER_FRAMES"
+name = "Coherent of finer frames"
+lean_symbol = "SE.InterpretiveKernel.coherent_of_finer_frames"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Coherence is preserved by refining the frame relation."
+
+[theorem.CoherentOfCoarserOccurrences]
+order = 17
+id = "CoherentOfCoarserOccurrences"
+cite_id = "IK.THM.COHERENT_OF_COARSER_OCCURRENCES"
+name = "Coherent of coarser occurrences"
+lean_symbol = "SE.InterpretiveKernel.coherent_of_coarser_occurrences"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Coherence is preserved by coarsening the occurrence relation."
+
+[theorem.CoherentTotalOccurrence]
+order = 18
+id = "CoherentTotalOccurrence"
+cite_id = "IK.THM.COHERENT_TOTAL_OCCURRENCE"
+name = "Coherent total occurrence"
+lean_symbol = "SE.InterpretiveKernel.coherent_total_occurrence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Degenerate satisfier 1: against the total occurrence relation, every frame relation is coherent. Coherence alone can be vacuous."
+
+[theorem.CoherentNoProbes]
+order = 19
+id = "CoherentNoProbes"
+cite_id = "IK.THM.COHERENT_NO_PROBES"
+name = "Coherent no probes"
+lean_symbol = "SE.InterpretiveKernel.coherent_no_probes"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Kernel"
+description = "Degenerate satisfier 2: with no selected probes, every pair is coherent."
+
+[theorem.LiftRelEquivalence]
+order = 20
+id = "LiftRelEquivalence"
+cite_id = "IK.THM.LIFT_REL_EQUIVALENCE"
+name = "Lift rel equivalence"
+lean_symbol = "SE.InterpretiveKernel.liftRel_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "L_Q(φ) is an equivalence relation (for any φ)."
+
+[theorem.LiftRelOfPair]
+order = 21
+id = "LiftRelOfPair"
+cite_id = "IK.THM.LIFT_REL_OF_PAIR"
+name = "Lift rel of pair"
+lean_symbol = "SE.InterpretiveKernel.liftRel_of_pair"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "Each generating pair is related by L_Q(φ)."
+
+[theorem.GeneratorsFinerLiftRel]
+order = 22
+id = "GeneratorsFinerLiftRel"
+cite_id = "IK.THM.GENERATORS_FINER_LIFT_REL"
+name = "Generators finer lift rel"
+lean_symbol = "SE.InterpretiveKernel.generators_finer_liftRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "Generating pairs are contained in L_Q(φ)."
+
+[theorem.LiftRelLeOfGenerators]
+order = 23
+id = "LiftRelLeOfGenerators"
+cite_id = "IK.THM.LIFT_REL_LE_OF_GENERATORS"
+name = "Lift rel le of generators"
+lean_symbol = "SE.InterpretiveKernel.liftRel_le_of_generators"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "Minimality, core form: an equivalence relation ρ on A that relates every generating pair contains L_Q(φ)."
+
+[theorem.LiftRelCompatible]
+order = 24
+id = "LiftRelCompatible"
+cite_id = "IK.THM.LIFT_REL_COMPATIBLE"
+name = "Lift rel compatible"
+lean_symbol = "SE.InterpretiveKernel.liftRel_compatible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "L_Q(φ) is itself compatible with φ."
+
+[theorem.LiftRelLeOfCompatible]
+order = 25
+id = "LiftRelLeOfCompatible"
+cite_id = "IK.THM.LIFT_REL_LE_OF_COMPATIBLE"
+name = "Lift rel le of compatible"
+lean_symbol = "SE.InterpretiveKernel.liftRel_le_of_compatible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "Minimality: L_Q(φ) is below every compatible occurrence relation."
+
+[theorem.LiftRelIsLeast]
+order = 26
+id = "LiftRelIsLeast"
+cite_id = "IK.THM.LIFT_REL_IS_LEAST"
+name = "Lift rel is least"
+lean_symbol = "SE.InterpretiveKernel.liftRel_isLeast"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "L_Q(φ) is the least compatible occurrence relation."
+
+[theorem.LiftRelUnique]
+order = 27
+id = "LiftRelUnique"
+cite_id = "IK.THM.LIFT_REL_UNIQUE"
+name = "Lift rel unique"
+lean_symbol = "SE.InterpretiveKernel.liftRel_unique"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "Uniqueness of the least compatible relation."
+
+[theorem.LiftRelMonotone]
+order = 28
+id = "LiftRelMonotone"
+cite_id = "IK.THM.LIFT_REL_MONOTONE"
+name = "Lift rel monotone"
+lean_symbol = "SE.InterpretiveKernel.liftRel_monotone"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "L is monotone in φ: finer frame relation gives finer lifted relation."
+
+[theorem.LiftRelMonotoneProbes]
+order = 29
+id = "LiftRelMonotoneProbes"
+cite_id = "IK.THM.LIFT_REL_MONOTONE_PROBES"
+name = "Lift rel monotone probes"
+lean_symbol = "SE.InterpretiveKernel.liftRel_monotone_probes"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lifting"
+description = "More probes, larger lifted relation: if Q ⊆ Q' then L_Q(φ) ≤ L_{Q'}(φ)."
+
+[theorem.Adjunction]
+order = 30
+id = "Adjunction"
+cite_id = "IK.THM.ADJUNCTION"
+name = "Adjunction"
+lean_symbol = "SE.InterpretiveKernel.adjunction"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Adjunction"
+description = "Central theorem: L_Q ⊣ K_Q."
+
+[theorem.LiftLeIffCoherent]
+order = 31
+id = "LiftLeIffCoherent"
+cite_id = "IK.THM.LIFT_LE_IFF_COHERENT"
+name = "Lift le iff coherent"
+lean_symbol = "SE.InterpretiveKernel.lift_le_iff_coherent"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Adjunction"
+description = "Adjunction stated with coherence."
+
+[theorem.Unit]
+order = 32
+id = "Unit"
+cite_id = "IK.THM.UNIT"
+name = "Unit"
+lean_symbol = "SE.InterpretiveKernel.unit"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Adjunction"
+description = "Unit: φ ≤ K_Q(L_Q(φ)). No hypotheses."
+
+[theorem.Counit]
+order = 33
+id = "Counit"
+cite_id = "IK.THM.COUNIT"
+name = "Counit"
+lean_symbol = "SE.InterpretiveKernel.counit"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Adjunction"
+description = "Counit: L_Q(K_Q(ρ)) ≤ ρ. Needs ρ to be an equivalence relation."
+
+[theorem.LiftKernelLift]
+order = 34
+id = "LiftKernelLift"
+cite_id = "IK.THM.LIFT_KERNEL_LIFT"
+name = "Lift kernel lift"
+lean_symbol = "SE.InterpretiveKernel.lift_kernel_lift"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Adjunction"
+description = "Closure-operator fact: L K L = L."
+
+[theorem.KernelLiftKernel]
+order = 35
+id = "KernelLiftKernel"
+cite_id = "IK.THM.KERNEL_LIFT_KERNEL"
+name = "Kernel lift kernel"
+lean_symbol = "SE.InterpretiveKernel.kernel_lift_kernel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Adjunction"
+description = "Closure-operator fact: K L K = K (for ρ an equivalence relation)."
+
+[theorem.AdjunctionSetoid]
+order = 36
+id = "AdjunctionSetoid"
+cite_id = "IK.THM.ADJUNCTION_SETOID"
+name = "Adjunction setoid"
+lean_symbol = "SE.InterpretiveKernel.adjunction_setoid"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Adjunction"
+description = "Bundled adjunction on setoids."
+
+[theorem.TotalRelEquivalence]
+order = 37
+id = "TotalRelEquivalence"
+cite_id = "IK.THM.TOTAL_REL_EQUIVALENCE"
+name = "Total rel equivalence"
+lean_symbol = "SE.InterpretiveKernel.totalRel_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The total relation is an equivalence relation."
+
+[theorem.DiagonalRelEquivalence]
+order = 38
+id = "DiagonalRelEquivalence"
+cite_id = "IK.THM.DIAGONAL_REL_EQUIVALENCE"
+name = "Diagonal rel equivalence"
+lean_symbol = "SE.InterpretiveKernel.diagonalRel_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The diagonal relation is an equivalence relation."
+
+[theorem.FinerDiagonalRel]
+order = 39
+id = "FinerDiagonalRel"
+cite_id = "IK.THM.FINER_DIAGONAL_REL"
+name = "Finer diagonal rel"
+lean_symbol = "SE.InterpretiveKernel.finer_diagonalRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The diagonal is finer than every reflexive relation."
+
+[theorem.FinerTotalRel]
+order = 40
+id = "FinerTotalRel"
+cite_id = "IK.THM.FINER_TOTAL_REL"
+name = "Finer total rel"
+lean_symbol = "SE.InterpretiveKernel.finer_totalRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Every relation is finer than the total relation."
+
+[theorem.MeetRelEquivalence]
+order = 41
+id = "MeetRelEquivalence"
+cite_id = "IK.THM.MEET_REL_EQUIVALENCE"
+name = "Meet rel equivalence"
+lean_symbol = "SE.InterpretiveKernel.meetRel_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The meet of a family of equivalence relations is an equivalence relation."
+
+[theorem.MeetRel2Equivalence]
+order = 42
+id = "MeetRel2Equivalence"
+cite_id = "IK.THM.MEET_REL2_EQUIVALENCE"
+name = "Meet rel2 equivalence"
+lean_symbol = "SE.InterpretiveKernel.meetRel2_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The binary meet of two equivalence relations is an equivalence relation."
+
+[theorem.MeetRelFiner]
+order = 43
+id = "MeetRelFiner"
+cite_id = "IK.THM.MEET_REL_FINER"
+name = "Meet rel finer"
+lean_symbol = "SE.InterpretiveKernel.meetRel_finer"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The meet is below each member."
+
+[theorem.FinerMeetRelIff]
+order = 44
+id = "FinerMeetRelIff"
+cite_id = "IK.THM.FINER_MEET_REL_IFF"
+name = "Finer meet rel iff"
+lean_symbol = "SE.InterpretiveKernel.finer_meetRel_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Universal property of the meet (greatest lower bound)."
+
+[theorem.JoinRelEquivalence]
+order = 45
+id = "JoinRelEquivalence"
+cite_id = "IK.THM.JOIN_REL_EQUIVALENCE"
+name = "Join rel equivalence"
+lean_symbol = "SE.InterpretiveKernel.joinRel_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The join of a family of relations is an equivalence relation."
+
+[theorem.JoinRel2Equivalence]
+order = 46
+id = "JoinRel2Equivalence"
+cite_id = "IK.THM.JOIN_REL2_EQUIVALENCE"
+name = "Join rel2 equivalence"
+lean_symbol = "SE.InterpretiveKernel.joinRel2_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The binary join of two relations is an equivalence relation."
+
+[theorem.FinerJoinRel]
+order = 47
+id = "FinerJoinRel"
+cite_id = "IK.THM.FINER_JOIN_REL"
+name = "Finer join rel"
+lean_symbol = "SE.InterpretiveKernel.finer_joinRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Each member is below the join."
+
+[theorem.FinerJoinRel2Left]
+order = 48
+id = "FinerJoinRel2Left"
+cite_id = "IK.THM.FINER_JOIN_REL2_LEFT"
+name = "Finer join rel2 left"
+lean_symbol = "SE.InterpretiveKernel.finer_joinRel2_left"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The left argument is finer than the binary join."
+
+[theorem.FinerJoinRel2Right]
+order = 49
+id = "FinerJoinRel2Right"
+cite_id = "IK.THM.FINER_JOIN_REL2_RIGHT"
+name = "Finer join rel2 right"
+lean_symbol = "SE.InterpretiveKernel.finer_joinRel2_right"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The right argument is finer than the binary join."
+
+[theorem.JoinRelFinerIff]
+order = 50
+id = "JoinRelFinerIff"
+cite_id = "IK.THM.JOIN_REL_FINER_IFF"
+name = "Join rel finer iff"
+lean_symbol = "SE.InterpretiveKernel.joinRel_finer_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Universal property of the join (least upper bound among equivalences)."
+
+[theorem.JoinRel2FinerIff]
+order = 51
+id = "JoinRel2FinerIff"
+cite_id = "IK.THM.JOIN_REL2_FINER_IFF"
+name = "Join rel2 finer iff"
+lean_symbol = "SE.InterpretiveKernel.joinRel2_finer_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "The binary join is finer than an equivalence relation exactly when both arguments are."
+
+[theorem.EqOfSameUpperBounds]
+order = 52
+id = "EqOfSameUpperBounds"
+cite_id = "IK.THM.EQ_OF_SAME_UPPER_BOUNDS"
+name = "Eq of same upper bounds"
+lean_symbol = "SE.InterpretiveKernel.eq_of_same_upper_bounds"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Lattice"
+description = "Two equivalence relations with the same equivalence upper bounds are equal."
+
+[theorem.KernelRelMeetIff]
+order = 53
+id = "KernelRelMeetIff"
+cite_id = "IK.THM.KERNEL_REL_MEET_IFF"
+name = "Kernel rel meet iff"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_meet_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "K preserves meets, pointwise form. No hypothesis on the family."
+
+[theorem.KernelRelMeet]
+order = 54
+id = "KernelRelMeet"
+cite_id = "IK.THM.KERNEL_REL_MEET"
+name = "Kernel rel meet"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_meet"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "K preserves meets, as an equality of relations."
+
+[theorem.KernelRelTotal]
+order = 55
+id = "KernelRelTotal"
+cite_id = "IK.THM.KERNEL_REL_TOTAL"
+name = "Kernel rel total"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_total"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "K ⊤ = ⊤ (empty meet)."
+
+[theorem.LiftRelDiagonal]
+order = 56
+id = "LiftRelDiagonal"
+cite_id = "IK.THM.LIFT_REL_DIAGONAL"
+name = "Lift rel diagonal"
+lean_symbol = "SE.InterpretiveKernel.liftRel_diagonal"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "L ⊥ = ⊥: the generated regime of equality on frames is equality on outputs."
+
+[theorem.LiftRelJoinRelUpper]
+order = 57
+id = "LiftRelJoinRelUpper"
+cite_id = "IK.THM.LIFT_REL_JOIN_REL_UPPER"
+name = "Lift rel join rel upper"
+lean_symbol = "SE.InterpretiveKernel.liftRel_joinRel_upper"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "Upper bounds of L(⋁ φᵢ) and ⋁ L(φᵢ) among equivalences coincide."
+
+[theorem.LiftRelJoinRel]
+order = 58
+id = "LiftRelJoinRel"
+cite_id = "IK.THM.LIFT_REL_JOIN_REL"
+name = "Lift rel join rel"
+lean_symbol = "SE.InterpretiveKernel.liftRel_joinRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "L preserves joins of arbitrary families."
+
+[theorem.KernelRelProbeUnionIff]
+order = 59
+id = "KernelRelProbeUnionIff"
+cite_id = "IK.THM.KERNEL_REL_PROBE_UNION_IFF"
+name = "Kernel rel probe union iff"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_probeUnion_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "K_{Q ∪ Q'}(ρ) = K_Q(ρ) ∧ K_{Q'}(ρ), pointwise."
+
+[theorem.KernelRelProbeUnion]
+order = 60
+id = "KernelRelProbeUnion"
+cite_id = "IK.THM.KERNEL_REL_PROBE_UNION"
+name = "Kernel rel probe union"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_probeUnion"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "K_{Q ∪ Q'}(ρ) = K_Q(ρ) ∧ K_{Q'}(ρ)."
+
+[theorem.LiftRelProbeUnion]
+order = 61
+id = "LiftRelProbeUnion"
+cite_id = "IK.THM.LIFT_REL_PROBE_UNION"
+name = "Lift rel probe union"
+lean_symbol = "SE.InterpretiveKernel.liftRel_probeUnion"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "L_{Q ∪ Q'}(φ) = L_Q(φ) ∨ L_{Q'}(φ)."
+
+[theorem.KernelRelProbeUnionFamilyIff]
+order = 62
+id = "KernelRelProbeUnionFamilyIff"
+cite_id = "IK.THM.KERNEL_REL_PROBE_UNION_FAMILY_IFF"
+name = "Kernel rel probe union family iff"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_probeUnionFamily_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "K_{⋃ Qᵢ}(ρ) = ⋀ K_{Qᵢ}(ρ), pointwise."
+
+[theorem.KernelRelProbeUnionFamily]
+order = 63
+id = "KernelRelProbeUnionFamily"
+cite_id = "IK.THM.KERNEL_REL_PROBE_UNION_FAMILY"
+name = "Kernel rel probe union family"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_probeUnionFamily"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "K_{⋃ Qᵢ}(ρ) = ⋀ K_{Qᵢ}(ρ)."
+
+[theorem.LiftRelProbeUnionFamily]
+order = 64
+id = "LiftRelProbeUnionFamily"
+cite_id = "IK.THM.LIFT_REL_PROBE_UNION_FAMILY"
+name = "Lift rel probe union family"
+lean_symbol = "SE.InterpretiveKernel.liftRel_probeUnionFamily"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "L_{⋃ Qᵢ}(φ) = ⋁ L_{Qᵢ}(φ)."
+
+[theorem.KernelRelNoProbes]
+order = 65
+id = "KernelRelNoProbes"
+cite_id = "IK.THM.KERNEL_REL_NO_PROBES"
+name = "Kernel rel no probes"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_noProbes"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "Empty probe family: K_∅(ρ) = ⊤."
+
+[theorem.LiftRelNoProbes]
+order = 66
+id = "LiftRelNoProbes"
+cite_id = "IK.THM.LIFT_REL_NO_PROBES"
+name = "Lift rel no probes"
+lean_symbol = "SE.InterpretiveKernel.liftRel_noProbes"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "Empty probe family: L_∅(φ) = ⊥."
+
+[theorem.KernelRelSingletonsIff]
+order = 67
+id = "KernelRelSingletonsIff"
+cite_id = "IK.THM.KERNEL_REL_SINGLETONS_IFF"
+name = "Kernel rel singletons iff"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_singletons_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Preservation"
+description = "A kernel is the meet of single-probe kernels."
+
+[theorem.LiftRelOfEqvClosure]
+order = 68
+id = "LiftRelOfEqvClosure"
+cite_id = "IK.THM.LIFT_REL_OF_EQV_CLOSURE"
+name = "Lift rel of eqv closure"
+lean_symbol = "SE.InterpretiveKernel.liftRel_of_eqvClosure"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Generating"
+description = "If frames e, e' are joined by a chain of G-steps, then for every selected probe their outputs are related by L_Q(G)."
+
+[theorem.LiftRelEqOfGenerates]
+order = 69
+id = "LiftRelEqOfGenerates"
+cite_id = "IK.THM.LIFT_REL_EQ_OF_GENERATES"
+name = "Lift rel eq of generates"
+lean_symbol = "SE.InterpretiveKernel.liftRel_eq_of_generates"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Generating"
+description = "Generating-set reduction, inclusion form: if G ⊆ φ ⊆ EqCl(G) then L_Q(G) = L_Q(φ)."
+
+[theorem.LiftRelEqOfEqvClosureEq]
+order = 70
+id = "LiftRelEqOfEqvClosureEq"
+cite_id = "IK.THM.LIFT_REL_EQ_OF_EQV_CLOSURE_EQ"
+name = "Lift rel eq of eqv closure eq"
+lean_symbol = "SE.InterpretiveKernel.liftRel_eq_of_eqvClosure_eq"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Generating"
+description = "Generating-set reduction, equality form (the paper's statement): if EqCl(G) = φ then EqCl(R_{Q,G}) = L_Q(φ)."
+
+[theorem.AdmissibleIffCompatible]
+order = 71
+id = "AdmissibleIffCompatible"
+cite_id = "IK.THM.ADMISSIBLE_IFF_COMPATIBLE"
+name = "Admissible iff compatible"
+lean_symbol = "SE.InterpretiveKernel.admissible_iff_compatible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Admissibility is exactly Compatible."
+
+[theorem.AdmissibleIffThresholdFiner]
+order = 72
+id = "AdmissibleIffThresholdFiner"
+cite_id = "IK.THM.ADMISSIBLE_IFF_THRESHOLD_FINER"
+name = "Admissible iff threshold finer"
+lean_symbol = "SE.InterpretiveKernel.admissible_iff_threshold_finer"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Exact threshold characterization: ρ is admissible iff Θ ≤ ρ (for ρ an equivalence relation)."
+
+[theorem.ThresholdAdmissible]
+order = 73
+id = "ThresholdAdmissible"
+cite_id = "IK.THM.THRESHOLD_ADMISSIBLE"
+name = "Threshold admissible"
+lean_symbol = "SE.InterpretiveKernel.threshold_admissible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "The threshold is admissible."
+
+[theorem.ThresholdFinest]
+order = 74
+id = "ThresholdFinest"
+cite_id = "IK.THM.THRESHOLD_FINEST"
+name = "Threshold finest"
+lean_symbol = "SE.InterpretiveKernel.threshold_finest"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "The threshold is the finest admissible regime."
+
+[theorem.AdmissibleUpward]
+order = 75
+id = "AdmissibleUpward"
+cite_id = "IK.THM.ADMISSIBLE_UPWARD"
+name = "Admissible upward"
+lean_symbol = "SE.InterpretiveKernel.admissible_upward"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Upward closure: coarsening an admissible regime keeps it admissible."
+
+[theorem.ThresholdMonotone]
+order = 76
+id = "ThresholdMonotone"
+cite_id = "IK.THM.THRESHOLD_MONOTONE"
+name = "Threshold monotone"
+lean_symbol = "SE.InterpretiveKernel.threshold_monotone"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Thresholds are monotone in the frame regime."
+
+[theorem.ThresholdProbes]
+order = 77
+id = "ThresholdProbes"
+cite_id = "IK.THM.THRESHOLD_PROBES"
+name = "Threshold probes"
+lean_symbol = "SE.InterpretiveKernel.threshold_probes"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Probe extension raises the threshold."
+
+[theorem.ThresholdJoinRel]
+order = 78
+id = "ThresholdJoinRel"
+cite_id = "IK.THM.THRESHOLD_JOIN_REL"
+name = "Threshold join rel"
+lean_symbol = "SE.InterpretiveKernel.threshold_joinRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "The threshold of a join of frame regimes is the join of the thresholds."
+
+[theorem.SimultaneousAdmissible]
+order = 79
+id = "SimultaneousAdmissible"
+cite_id = "IK.THM.SIMULTANEOUS_ADMISSIBLE"
+name = "Simultaneous admissible"
+lean_symbol = "SE.InterpretiveKernel.simultaneous_admissible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Simultaneous admissibility: ρ is admissible for every φᵢ iff it lies above the join of the thresholds."
+
+[theorem.TotalAdmissible]
+order = 80
+id = "TotalAdmissible"
+cite_id = "IK.THM.TOTAL_ADMISSIBLE"
+name = "Total admissible"
+lean_symbol = "SE.InterpretiveKernel.total_admissible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "The total relation is admissible for every frame regime."
+
+[theorem.AdmissibleExtremal]
+order = 81
+id = "AdmissibleExtremal"
+cite_id = "IK.THM.ADMISSIBLE_EXTREMAL"
+name = "Admissible extremal"
+lean_symbol = "SE.InterpretiveKernel.admissible_extremal"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Extremal admissible regimes: the threshold is least, the total relation is greatest."
+
+[theorem.AdmissibleMeetRel]
+order = 82
+id = "AdmissibleMeetRel"
+cite_id = "IK.THM.ADMISSIBLE_MEET_REL"
+name = "Admissible meet rel"
+lean_symbol = "SE.InterpretiveKernel.admissible_meetRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "Meet closure of admissibility, for any family (including the empty one)."
+
+[theorem.ThresholdIffForallAdmissible]
+order = 83
+id = "ThresholdIffForallAdmissible"
+cite_id = "IK.THM.THRESHOLD_IFF_FORALL_ADMISSIBLE"
+name = "Threshold iff forall admissible"
+lean_symbol = "SE.InterpretiveKernel.threshold_iff_forall_admissible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "The threshold is the meet of all admissible regimes, pointwise form."
+
+[theorem.ThresholdEqMeetAdmissible]
+order = 84
+id = "ThresholdEqMeetAdmissible"
+cite_id = "IK.THM.THRESHOLD_EQ_MEET_ADMISSIBLE"
+name = "Threshold eq meet admissible"
+lean_symbol = "SE.InterpretiveKernel.threshold_eq_meet_admissible"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Threshold"
+description = "The threshold is the meet of all admissible regimes."
+
+[theorem.PrincipalPairFinerIff]
+order = 85
+id = "PrincipalPairFinerIff"
+cite_id = "IK.THM.PRINCIPAL_PAIR_FINER_IFF"
+name = "Principal pair finer iff"
+lean_symbol = "SE.InterpretiveKernel.principalPair_finer_iff"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "γ_{x,y} is below an equivalence relation τ iff τ identifies x and y."
+
+[theorem.DemandEquivalence]
+order = 86
+id = "DemandEquivalence"
+cite_id = "IK.THM.DEMAND_EQUIVALENCE"
+name = "Demand equivalence"
+lean_symbol = "SE.InterpretiveKernel.demand_equivalence"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Pairwise interpretive demand is an equivalence relation on outputs."
+
+[theorem.KernelRelIffDemandFiner]
+order = 87
+id = "KernelRelIffDemandFiner"
+cite_id = "IK.THM.KERNEL_REL_IFF_DEMAND_FINER"
+name = "Kernel rel iff demand finer"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_iff_demand_finer"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Pairwise threshold characterization: K_Q(ρ) x y ↔ δ(x,y) ≤ ρ."
+
+[theorem.DemandExplicit]
+order = 88
+id = "DemandExplicit"
+cite_id = "IK.THM.DEMAND_EXPLICIT"
+name = "Demand explicit"
+lean_symbol = "SE.InterpretiveKernel.demand_explicit"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Explicit form: δ(x,y) is the equivalence closure of {(I p x, I p y) | p selected}."
+
+[theorem.GeneralizedUltrametricReflZeroEq]
+order = 89
+id = "GeneralizedUltrametricReflZeroEq"
+cite_id = "IK.THM.GENERALIZED_ULTRAMETRIC_REFL_ZERO_EQ"
+name = "Generalized ultrametric refl zero eq"
+lean_symbol = "SE.InterpretiveKernel.GeneralizedUltrametric.refl_zero_eq"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The paper's (U1) as an equality."
+
+[theorem.GeneralizedUltrametricSymmEq]
+order = 90
+id = "GeneralizedUltrametricSymmEq"
+cite_id = "IK.THM.GENERALIZED_ULTRAMETRIC_SYMM_EQ"
+name = "Generalized ultrametric symm eq"
+lean_symbol = "SE.InterpretiveKernel.GeneralizedUltrametric.symm_eq"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The paper's (U2) as an equality."
+
+[theorem.DemandReflZero]
+order = 91
+id = "DemandReflZero"
+cite_id = "IK.THM.DEMAND_REFL_ZERO"
+name = "Demand refl zero"
+lean_symbol = "SE.InterpretiveKernel.demand_refl_zero"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The demand of a frame against itself is finer than equality."
+
+[theorem.DemandSymm]
+order = 92
+id = "DemandSymm"
+cite_id = "IK.THM.DEMAND_SYMM"
+name = "Demand symm"
+lean_symbol = "SE.InterpretiveKernel.demand_symm"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Pairwise interpretive demand is symmetric in its two frames."
+
+[theorem.DemandTriangle]
+order = 93
+id = "DemandTriangle"
+cite_id = "IK.THM.DEMAND_TRIANGLE"
+name = "Demand triangle"
+lean_symbol = "SE.InterpretiveKernel.demand_triangle"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Pairwise interpretive demand satisfies the strong triangle inequality."
+
+[theorem.PreservesMeetsMonotone]
+order = 94
+id = "PreservesMeetsMonotone"
+cite_id = "IK.THM.PRESERVES_MEETS_MONOTONE"
+name = "Preserves meets monotone"
+lean_symbol = "SE.InterpretiveKernel.PreservesMeets.monotone"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Meet-preserving maps are monotone on equivalence relations."
+
+[theorem.RepresentingDistKey]
+order = 95
+id = "RepresentingDistKey"
+cite_id = "IK.THM.REPRESENTING_DIST_KEY"
+name = "Representing dist key"
+lean_symbol = "SE.InterpretiveKernel.representingDist_key"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Key equivalence for the representing value."
+
+[theorem.RepresentationOfPreservesMeets]
+order = 96
+id = "RepresentationOfPreservesMeets"
+cite_id = "IK.THM.REPRESENTATION_OF_PRESERVES_MEETS"
+name = "Representation of preserves meets"
+lean_symbol = "SE.InterpretiveKernel.representation_of_preservesMeets"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Representation theorem, forward direction: a complete meet homomorphism on equivalence relations is represented by a generalized ultrametric."
+
+[theorem.PreservesMeetsUltrametricKernel]
+order = 97
+id = "PreservesMeetsUltrametricKernel"
+cite_id = "IK.THM.PRESERVES_MEETS_ULTRAMETRIC_KERNEL"
+name = "Preserves meets ultrametric kernel"
+lean_symbol = "SE.InterpretiveKernel.preservesMeets_ultrametricKernel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Representation theorem, converse: the map determined by a generalized ultrametric is a complete meet homomorphism on equivalence relations."
+
+[theorem.UltrametricUnique]
+order = 98
+id = "UltrametricUnique"
+cite_id = "IK.THM.ULTRAMETRIC_UNIQUE"
+name = "Ultrametric unique"
+lean_symbol = "SE.InterpretiveKernel.ultrametric_unique"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "Uniqueness: two generalized ultrametrics representing the same map on equivalence relations have equal values."
+
+[theorem.PreservesMeetsKernelRel]
+order = 99
+id = "PreservesMeetsKernelRel"
+cite_id = "IK.THM.PRESERVES_MEETS_KERNEL_REL"
+name = "Preserves meets kernel rel"
+lean_symbol = "SE.InterpretiveKernel.preservesMeets_kernelRel"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "K_Q is a complete meet homomorphism on equivalence relations."
+
+[theorem.DemandUnique]
+order = 100
+id = "DemandUnique"
+cite_id = "IK.THM.DEMAND_UNIQUE"
+name = "Demand unique"
+lean_symbol = "SE.InterpretiveKernel.demand_unique"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Representation"
+description = "The pairwise demand is the unique generalized ultrametric representing K_Q."
+
+[theorem.KernelRelIffSignatureEq]
+order = 101
+id = "KernelRelIffSignatureEq"
+cite_id = "IK.THM.KERNEL_REL_IFF_SIGNATURE_EQ"
+name = "Kernel rel iff signature eq"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_iff_signature_eq"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Signature"
+description = "K_Q(ρ) is the kernel of the probe signature."
+
+[theorem.KernelRelIffRestrict]
+order = 102
+id = "KernelRelIffRestrict"
+cite_id = "IK.THM.KERNEL_REL_IFF_RESTRICT"
+name = "Kernel rel iff restrict"
+lean_symbol = "SE.InterpretiveKernel.kernelRel_iff_restrict"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Signature"
+description = "Selecting probes by Q equals taking the whole subtype of selected probes as the family (the paper's fixed probe family)."
+
+[theorem.IncompatibilityWitnessNotCoherent]
+order = 103
+id = "IncompatibilityWitnessNotCoherent"
+cite_id = "IK.THM.INCOMPATIBILITY_WITNESS_NOT_COHERENT"
+name = "Incompatibility witness not coherent"
+lean_symbol = "SE.InterpretiveKernel.IncompatibilityWitness.not_coherent"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Witness"
+description = "A valid witness refutes coherence."
+
+[theorem.IncompatibilityWitnessNotLiftFiner]
+order = 104
+id = "IncompatibilityWitnessNotLiftFiner"
+cite_id = "IK.THM.INCOMPATIBILITY_WITNESS_NOT_LIFT_FINER"
+name = "Incompatibility witness not lift finer"
+lean_symbol = "SE.InterpretiveKernel.IncompatibilityWitness.not_lift_finer"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Witness"
+description = "A valid witness refutes L_Q(φ) ≤ ρ when ρ is an equivalence relation."
+
+[theorem.NotCoherentIffWitness]
+order = 105
+id = "NotCoherentIffWitness"
+cite_id = "IK.THM.NOT_COHERENT_IFF_WITNESS"
+name = "Not coherent iff witness"
+lean_symbol = "SE.InterpretiveKernel.not_coherent_iff_witness"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Witness"
+description = "Converse (classical): failure of coherence yields a witness."
+
+[theorem.CoherentOrWitness]
+order = 106
+id = "CoherentOrWitness"
+cite_id = "IK.THM.COHERENT_OR_WITNESS"
+name = "Coherent or witness"
+lean_symbol = "SE.InterpretiveKernel.coherent_or_witness"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Witness"
+description = "With complete enumerations, either φ is coherent with ρ or a witness exists; the dichotomy is decided by WitnessOn."
+
+[theorem.NotCoherentIffWitnessOn]
+order = 107
+id = "NotCoherentIffWitnessOn"
+cite_id = "IK.THM.NOT_COHERENT_IFF_WITNESS_ON"
+name = "Not coherent iff witness on"
+lean_symbol = "SE.InterpretiveKernel.not_coherent_iff_witnessOn"
+lean_kind = "theorem"
+source_module = "SE.InterpretiveKernel.Witness"
+description = "Over complete enumerations, WitnessOn decides non-coherence."

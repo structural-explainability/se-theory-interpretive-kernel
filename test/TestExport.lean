@@ -1,4 +1,4 @@
-import SE.IdentityRegimes.Theorems
+import SE.InterpretiveKernel.Theorems
 
 /-!
 File: test/TestExport.lean
@@ -11,12 +11,12 @@ Must be listed in lakefile.toml to be run as part of CI.
 Run with  `lake build TestExport`.
 -/
 
-#check IdentityRegimes.Regime
-#check IdentityRegimes.RegimeProfile
-#check IdentityRegimes.Requirement
-#check IdentityRegimes.IsCanonicalRegime
-#check IdentityRegimes.ProfileWellFormed
-#check IdentityRegimes.RequirementSatisfied
-#check IdentityRegimes.RegimeApplicationAdmissible
-#check IdentityRegimes.all_regimes_canonical
-#check IdentityRegimes.regime_application_admissible_of_neutral
+#check InterpretiveKernel.Regime
+#check InterpretiveKernel.RegimeProfile
+#check InterpretiveKernel.Requirement
+#check InterpretiveKernel.IsCanonicalRegime
+#check InterpretiveKernel.ProfileWellFormed
+#check InterpretiveKernel.RequirementSatisfied
+#check InterpretiveKernel.RegimeApplicationAdmissible
+#check InterpretiveKernel.all_regimes_canonical
+#check InterpretiveKernel.regime_application_admissible_of_neutral
