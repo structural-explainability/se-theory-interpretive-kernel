@@ -13,21 +13,8 @@
 # ============================================================
 
 name = "se-theory-interpretive-kernel"
-version = "0.4.1" # CUSTOM: Sets the current release version
+version = "0.1.0" # CUSTOM: Sets the current release version
 license = "Apache-2.0"
-
-keywords = [
-  "structural-explainability",
-  "formal-contract",
-  "neutrality",
-  "identity-regimes",
-  "invariants",
-  "formal-specification",
-  "formal-verification",
-  "proof-carrying",
-  "theorem-proving",
-  "lean4",
-]
 
 # ============================================================
 # === BUILD SURFACE ===
@@ -41,15 +28,7 @@ testDriver = "SETest"
 # === DEPENDENCIES ===
 # ============================================================
 
-[[require]]
-name = "se-theory-neutral-substrate"
-git = "https://github.com/structural-explainability/se-theory-neutral-substrate"
-rev = "v0.13.0"
-
-[[require]]
-name = "se-theory-transformation"
-git = "https://github.com/structural-explainability/se-theory-transformation"
-rev = "v0.6.1"
+# none
 
 # ============================================================
 # === PUBLIC LIBRARY ===

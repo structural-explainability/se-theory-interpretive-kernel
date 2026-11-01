@@ -22,7 +22,7 @@ class = "theory"
 kind = "foundation"
 status = "active"
 since = "2026"
-summary = "Lean 4 formalization of the six identity regimes, their requirement structure, and derived regime-profile structure over admissible neutral substrates."
+summary = "Lean 4 formalization of the Interpretive Kernel: how equivalence relations on distinct carriers are connected by interpretation, with its adjunction, thresholds, and generalized-ultrametric representation."
 
 # === Layer Position ===
 
@@ -33,13 +33,13 @@ role = "theory"
 # === Dependency Declarations ===
 
 [depends]
-# Required upstream repository dependencies.
-required = [
-  { repository = "se-theory-neutral-substrate", kind = "semantic" },
-]
+required = []
 
 # Optional upstream repository dependencies.
-optional = []
+optional = [
+  { repository = "se-theory-neutral-substrate", kind = "semantic" },
+  { repository = "se-theory-transformation", kind = "semantic" },
+]
 
 # === Provided Artifacts ===
 
@@ -49,37 +49,33 @@ optional = []
 artifacts = [
   "lean-library",
   "theorem-set",
-  "regime-classification-matrix",
-  "regime-classification-values",
-  "regime-families",
-  "regime-profile-derivation",
-  "regime-profiles",
-  "regime-transformations",
 ]
 
 # === Scope ===
 
 [scope]
 includes = [
-  "six canonical identity regimes (OBL, NOR, OCC, CTX, REC, ENR)",
-  "regime requirement structure",
-  "regime-profile structure",
-  "admissibility conditions for regime application over neutral substrates",
-  "necessity and sufficiency theorem structure",
+  "interpretation-induced kernel over a selected probe family",
+  "generated occurrence regime and its adjunction with the kernel",
+  "coherence, admissibility, and interpretive thresholds",
+  "pairwise interpretive demand and its generalized-ultrametric representation",
+  "finite incompatibility witnesses",
+  "finite examples and counterexamples",
   "machine-checked Lean theorems",
-  "machine-readable reference artifacts for transformation and classification layers",
+  "machine-readable reference artifacts for the public Lean surface",
 ]
 
 excludes = [
   "neutral substrate primitives",
-  "substrate well-formedness",
-  "substrate separation constraints",
+  "identity-regime taxonomy and regime profiles",
   "persistence behavior",
-  "mapping semantics",
-  "operational validation logic",
+  "operational auditing of implemented identity rules",
+  "comparison liftings from output regimes to structured objects",
+  "domain-specific interpretations, including scheduling",
+  "empirical validation of probes, interpretations, or equivalence criteria",
+  "computational complexity of finite procedures",
   "repository governance rules",
   "schema definitions for other repositories",
-  "domain-specific mappings or data",
   "runtime systems",
 ]
 

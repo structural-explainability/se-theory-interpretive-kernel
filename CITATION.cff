@@ -12,7 +12,7 @@ message: "If you use this work, please cite it using the metadata in CITATION.cf
 type: software
 
 title: "SE Theory: Interpretive Kernel"
-version: "0.3.1" # CUSTOM: Updated to match the current release version of the project
+version: "0.1.0" # CUSTOM: Updated to match the current release version of the project
 date-released: "2026-10-30" # CUSTOM: Updated to match the current release date of the project
 
 authors:
@@ -27,18 +27,17 @@ url: "https://github.com/structural-explainability/se-theory-interpretive-kernel
 license: Apache-2.0
 
 abstract: >
-  Planned Lean 4 formalization of the Interpretive Kernel of Structural
+  Lean 4 formalization of the Interpretive Kernel of Structural
   Explainability. The theory investigates how equivalence relations
   on distinct carriers are related through explicit interpretations
-  and comparison rules. Its proposed scope includes finite equivalence
-  and partition structures, interpretation-induced kernels, refinement
-  and admissibility conditions, coherent output regimes, threshold
-  constructions, and finite witnesses of incompatibility or
-  incomparability. The objective is to characterize the mathematical
-  conditions under which interpretations preserve or distinguish
-  declared relationships without presupposing agreement about domain
-  meaning. The repository does not define domain semantics, operational
-  audits, or the identity-regime taxonomy.
+  and selected probes. It defines the interpretation-induced kernel and
+  its left adjoint, the generated occurrence regime, and establishes the
+  adjunction, preservation laws, probe-family laws, interpretive
+  thresholds, and a generalized-ultrametric representation of the kernel,
+  together with finite witnesses of incompatibility and finite
+  counterexamples. The theory characterizes the mathematical conditions
+  under which interpretations preserve or distinguish declared
+  relationships without presupposing agreement about domain meaning.
 
 keywords:
   - structural-explainability

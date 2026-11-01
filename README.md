@@ -1,4 +1,4 @@
-# SE Theory: Identity Regimes
+# SE Theory: Interpretive Kernel
 
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://structural-explainability.github.io/se-theory-interpretive-kernel/)
 [![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/structural-explainability/se-theory-interpretive-kernel)
@@ -10,10 +10,12 @@
 [![Docs](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/deploy-zensical.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/deploy-zensical.yml)
 [![Links](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-theory-interpretive-kernel/actions/workflows/links.yml)
 
-> Lean 4 formalization of the identity regimes of Structural Explainability.
+> Lean 4 formalization of the Interpretive Kernel of Structural Explainability.
 
-This repository defines the six canonical identity regimes and derived
-regime-profile structure over admissible neutral substrates.
+This repository formalizes how equivalence relations on distinct carriers are
+connected by interpretation: the interpretation-induced kernel, its left
+adjoint, interpretive thresholds, and the generalized-ultrametric
+representation.
 
 For the full documentation, see [`docs/en/index.md`](./docs/en/index.md).
 
@@ -44,8 +46,8 @@ import SE.InterpretiveKernel
 The public import surface is curated in:
 
 ```text
-SE.InterpretiveKernel.lean
-SE.InterpretiveKernel/Surface.lean
+SE.lean
+SE/InterpretiveKernel.lean
 ```
 
 ## Developer
@@ -131,8 +133,6 @@ git add -A
 git commit -m "update"
 git push -u origin main
 ```
-
-</details>
 
 ## Authority Manifest
 

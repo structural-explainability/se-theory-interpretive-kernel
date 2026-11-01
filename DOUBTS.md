@@ -42,9 +42,6 @@ Even if a theorem is correctly proved, can we establish the assumptions necessar
   `kernelRel_iff_demand_finer`.
 - Unresolved:
   - no Python module for `K`, `L`, or witnesses was available to compare;
-  - the other supplied modules (`model.py`, `oracle.py`, `fast.py`,
-    `generate.py`, `check.py`, `paper_cases.py`) are SE-210 Operational
-    Identity code, not SE-220;
   - `lifting.py` says the kernel construction requires `C` to preserve
     arbitrary meets, while the paper's Monotone Comparison Lifting requires
     only monotonicity. Meet preservation enters at the representation
@@ -84,23 +81,22 @@ Even if a theorem is correctly proved, can we establish the assumptions necessar
 - To close: Section 7 can be formalized as a separate module when needed.
   Sections 8 and 10 are outside the scope of a foundational theory.
 
-### UM-4. (OPEN) Do the declared dependencies match the dependencies the Lean source uses?
+### UM-4. (RESOLVED) Do the declared dependencies match the dependencies the Lean source uses?
 
 - Criterion: Mathematical Correctness.
-- Status: Open.
-- Concern: dependencies must be explicit. `lakefile.toml` requires
-  `se-theory-neutral-substrate` and `se-theory-transformation`, but no Lean
-  file in this repository imports either one.
-- Established: the Lean source imports only Lean core and its own modules.
-  `reference/dependency-registry.toml` records both theories as allowed but
-  not required, and records identity regimes, operational identity,
-  persistence, and the integration theory as forbidden.
-- Unresolved: the lakefile and the registry disagree about whether the two
-  theories are needed. The forbidden entries are checked only by the absence
-  of imports; they record architectural intent that Lean does not enforce.
-- To close: remove the two `require`s from `lakefile.toml`, or add an
-  import and a theorem that uses each one and mark it required in the
-  registry.
+- Status: Resolved.
+- Concern: dependencies must be explicit, and the declarations must agree
+  with what the Lean source imports.
+- Evidence: the Lean source imports only Lean core and its own modules.
+  `lakefile.toml` declares no dependencies. `SE_MANIFEST.toml` lists no
+  required dependencies and lists two as optional.
+  `reference/dependency-registry.toml` records both as allowed but not
+  required, and records identity regimes, operational identity, persistence,
+  and the integration theory as forbidden.
+- Scope: the forbidden entries are checked only by the absence of imports;
+  they record architectural intent that Lean does not enforce. If an import
+  of either optional theory is added, update the lakefile, the manifest, and
+  the registry together.
 
 ## Register 2. Doubts About Conclusions (Rebutting Doubts)
 
