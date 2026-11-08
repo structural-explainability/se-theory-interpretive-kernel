@@ -89,7 +89,7 @@ Follow these steps exactly when creating a new release.
 1.3. CHANGELOG.md: add section, move unreleased entries, update links
 1.4. pyproject.toml: update version (near top of the file)
 
-### Task 2. Set up and Validate
+### Task 2. Set Up and Validate
 
 ```pwsh
 # set up or update Python environment
@@ -118,7 +118,7 @@ npx markdownlint-cli2 --fix
 
 Review all generated and modified files before committing.
 
-### Task 3. Commit, tag, push
+### Task 3. Git Add-Commit-Push, Then Tag
 
 ```shell
 git add -A
@@ -133,7 +133,22 @@ git tag vX.Y.Z -m "X.Y.Z"
 git push origin vX.Y.Z
 ```
 
-### Task 4. After tagging, verify tag consistency
+### Task 4. Verify the Release and Zenodo archive
+
+The release-on-tag workflow publishes a GitHub Release
+for MAJOR and MINOR tags only (vX.Y.0).
+PATCH tags (vX.Y.Z, Z > 0) stay as tags.
+
+To verify:
+
+```shell
+gh release view vX.Y.Z  # confirm Release exists with notes + artifacts
+gh run list --workflow=release-pypi.yml   # confirm the workflow succeeded
+```
+
+If Zenodo archiving is enabled, confirm that the release has a
+version-specific DOI and is linked to the repository's concept DOI.
+Record the DOI in CITATION.cff only when it has been assigned and verified.
 
 ```shell
 uvx --from se-manifest-schema se-manifest check-version --require-tag
@@ -145,8 +160,8 @@ Run this after `git push origin vX.Y.Z`; it will fail before that point.
 ## Only As Needed (delete a tag)
 
 ```shell
-git tag -d vX.Z.Y
-git push origin :refs/tags/vX.Z.Y
+git tag -d vX.Y.Z
+git push origin :refs/tags/vX.Y.Z
 ```
 
 ## Links

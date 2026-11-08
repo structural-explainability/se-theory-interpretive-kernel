@@ -9,12 +9,12 @@ They do not replace the authoritative Lean definitions and proofs.
 - Formal definitions and theorems: `SE/InterpretiveKernel/`
 - Public Lean surface: `SE.InterpretiveKernel`
 - Formal declaration registries: `reference/`
-- Active research questions and limitations: [DOUBTS.md](DOUBTS.md)
+- Active unresolved research questions: [DOUBTS.md](DOUBTS.md)
 - Repository scope and dependencies: `SE_MANIFEST.toml`
 
 Decisions are recorded with stable identifiers.
-Resolved research doubts need not remain in `DOUBTS.md`
-when their conclusions are preserved here or in the formal theory.
+Resolved research findings and standing limitations retain their
+original IDs when moved here from `DOUBTS.md` for traceability.
 
 ---
 
@@ -318,6 +318,83 @@ and equivalence criteria.
 A finite example establishes the behavior of a
 mathematical construction under its assumptions.
 It does not by itself constitute empirical validation.
+
+---
+
+## Resolved Research Findings
+
+The following issue was resolved and is retained here as a historical
+finding. Its original identifier is preserved.
+
+### UM-004. (RESOLVED) Do the declared dependencies match the dependencies the Lean source uses?
+
+- Criterion: Mathematical Correctness.
+- Status: Resolved.
+- Concern: dependencies must be explicit, and the declarations must agree
+  with what the Lean source imports.
+- Evidence: the Lean source imports only Lean core and its own modules.
+  `lakefile.toml` declares no dependencies. `SE_MANIFEST.toml` lists no
+  required dependencies and lists two as optional.
+  `reference/dependency-registry.toml` records both as allowed but not
+  required, and records identity regimes, operational identity, persistence,
+  and the integration theory as forbidden.
+- Scope: the forbidden entries are checked only by the absence of imports;
+  they record architectural intent that Lean does not enforce. If an import
+  of either optional theory is added, update the lakefile, the manifest, and
+  the registry together.
+
+## Standing Limitations
+
+These limitations remain relevant even when the formal theorems
+are mathematically correct.
+
+They are not unresolved mathematical defects.
+They identify conditions and boundaries that must be respected
+when interpreting or applying the theory.
+
+### SL-001. (STANDING RULES) Occurrence Regimes Must Be Equivalence Relations
+
+The adjunction requires the supplied occurrence relation
+to be an equivalence relation.
+
+The result does not hold for arbitrary relations without
+the required hypotheses.
+
+Applications must establish these properties before
+invoking the adjunction.
+
+### SL-002. (STANDING RULES) Coherence May Be Vacuous
+
+Coherence holds for the total occurrence equivalence
+and for an empty selected probe family.
+
+Such results may provide little discriminating information.
+
+Applications must justify their occurrence equivalence
+and probe selection before treating coherence as
+scientifically informative.
+
+### SL-003. (STANDING RULES) Observational Equivalence Is Not Referent Identity
+
+An interpretation-induced kernel may relate distinct frames.
+
+Likewise, zero pairwise demand does not establish
+identity of the intended referents.
+
+The construction identifies equivalence under the
+supplied interpretation, probes, and occurrence criterion.
+It does not independently establish real-world identity.
+
+### SL-004. (STANDING RULES) Incompatibility Does Not Identify Its Cause
+
+An incompatibility witness establishes that the
+supplied frame and occurrence equivalences are
+incompatible under the selected interpretation and probes.
+
+It does not determine which assumption or input
+is scientifically incorrect.
+
+Diagnosing the cause requires additional evidence.
 
 ---
 

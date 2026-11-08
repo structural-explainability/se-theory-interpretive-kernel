@@ -1,8 +1,9 @@
 # Research Doubts and Open Questions
 
 This document records the current research assessment,
-known limitations, unresolved questions, and safeguards
-against overclaiming for this theory.
+unresolved questions that may affect the claims of this theory.
+Resolved findings and standing limitations are recorded in
+[DECISIONS.md](DECISIONS.md).
 
 For the three research criteria, doubt classifications,
 status definitions, and procedures, see the
@@ -29,7 +30,7 @@ The doubts below identify specific issues affecting these assessments.
 These questions concern the premises of an argument.
 Even if a theorem is correctly proved, can we establish the assumptions necessary to apply it?
 
-### UM-1. (OPEN) Does the Python implementation match the paper and the Lean?
+### UM-001. (OPEN) Does the Python implementation match the paper and the Lean?
 
 - Criterion: Mathematical Correctness.
 - Status: Open.
@@ -51,7 +52,7 @@ Even if a theorem is correctly proved, can we establish the assumptions necessar
   of monotone and meet-preserving applies to the kernel and which to the
   representation.
 
-### UM-2. (OPEN) Are the computational procedure and its complexity verified?
+### UM-002. (OPEN) Are the computational procedure and its complexity verified?
 
 - Criterion: Mathematical Correctness.
 - Status: Open.
@@ -67,7 +68,7 @@ Even if a theorem is correctly proved, can we establish the assumptions necessar
   list-based correctness theorem for the forest procedure can be added
   later. Complexity bounds in Lean are not recommended.
 
-### UM-3. (OPEN) Are the paper's later results supported by Lean?
+### UM-003. (OPEN) Are the paper's later results supported by Lean?
 
 - Criterion: Mathematical Correctness.
 - Status: Open.
@@ -80,23 +81,6 @@ Even if a theorem is correctly proved, can we establish the assumptions necessar
   - Section 10 evidence plan, which is not a Lean question.
 - To close: Section 7 can be formalized as a separate module when needed.
   Sections 8 and 10 are outside the scope of a foundational theory.
-
-### UM-4. (RESOLVED) Do the declared dependencies match the dependencies the Lean source uses?
-
-- Criterion: Mathematical Correctness.
-- Status: Resolved.
-- Concern: dependencies must be explicit, and the declarations must agree
-  with what the Lean source imports.
-- Evidence: the Lean source imports only Lean core and its own modules.
-  `lakefile.toml` declares no dependencies. `SE_MANIFEST.toml` lists no
-  required dependencies and lists two as optional.
-  `reference/dependency-registry.toml` records both as allowed but not
-  required, and records identity regimes, operational identity, persistence,
-  and the integration theory as forbidden.
-- Scope: the forbidden entries are checked only by the absence of imports;
-  they record architectural intent that Lean does not enforce. If an import
-  of either optional theory is added, update the lakefile, the manifest, and
-  the registry together.
 
 ## Register 2. Doubts About Conclusions (Rebutting Doubts)
 
@@ -111,15 +95,15 @@ whether its assumptions are satisfied.
 
 **None currently identified.**
 
-## Register 3. Doubts About What Our Results Mean (Undercutting Doubts)
+## Register 3. Doubts About What Results Mean (Undercutting Doubts)
 
 These questions concern the connection
 between a formal theorem and the scientific claim made about it.
 A theorem may be correct while its informal interpretation is too strong.
-Some of these doubts are addressed by permanent documentation
-rules rather than additional proofs.
+Standing documentation rules are recorded in
+[DECISIONS.md](DECISIONS.md), rather than in this register.
 
-### UC-1. (OPEN) Closure across probes may force unintended identifications
+### UC-001. (OPEN) Closure across probes may force unintended identifications
 
 - Criterion: Scientific Adequacy.
 - Status: Open.
@@ -130,7 +114,7 @@ rules rather than additional proofs.
 - To close: for each application, list the generated identifications beyond
   the generating pairs and justify them or change the probes or regimes.
 
-### UC-2. (OPEN) Theoretical contribution beyond existing machinery
+### UC-002. (OPEN) Theoretical contribution beyond existing machinery
 
 - Criterion: Theoretical Contribution.
 - Status: Open.
@@ -147,58 +131,5 @@ rules rather than additional proofs.
   and the pairwise value has an operational threshold meaning.
 - To close: independent literature comparison; an application where the
   threshold reading changes a conclusion that the bare adjunction does not.
-
-## Standing Limitations
-
-These limitations remain relevant even when the formal theorems
-are mathematically correct.
-
-They are not unresolved mathematical defects.
-They identify conditions and boundaries that must be respected
-when interpreting or applying the theory.
-
-### SL-1. Occurrence Regimes Must Be Equivalence Relations
-
-The adjunction requires the supplied occurrence relation
-to be an equivalence relation.
-
-The result does not hold for arbitrary relations without
-the required hypotheses.
-
-Applications must establish these properties before
-invoking the adjunction.
-
-### SL-2. Coherence May Be Vacuous
-
-Coherence holds for the total occurrence equivalence
-and for an empty selected probe family.
-
-Such results may provide little discriminating information.
-
-Applications must justify their occurrence equivalence
-and probe selection before treating coherence as
-scientifically informative.
-
-### SL-3. Observational Equivalence Is Not Referent Identity
-
-An interpretation-induced kernel may relate distinct frames.
-
-Likewise, zero pairwise demand does not establish
-identity of the intended referents.
-
-The construction identifies equivalence under the
-supplied interpretation, probes, and occurrence criterion.
-It does not independently establish real-world identity.
-
-### SL-4. Incompatibility Does Not Identify Its Cause
-
-An incompatibility witness establishes that the
-supplied frame and occurrence equivalences are
-incompatible under the selected interpretation and probes.
-
-It does not determine which assumption or input
-is scientifically incorrect.
-
-Diagnosing the cause requires additional evidence.
 
 <!-- markdownlint-enable MD024 -->
